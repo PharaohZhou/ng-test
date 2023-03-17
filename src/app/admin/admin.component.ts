@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import {MatSidenav} from "@angular/material/sidenav";
+import {BreakpointObserver} from "@angular/cdk/layout";
 
 @Component({
   selector: 'app-admin',
@@ -7,5 +8,9 @@ import {MatSidenav} from "@angular/material/sidenav";
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent {
-  showFiller = false;
+  @ViewChild('sidenav')
+  sidenav!: MatSidenav;
+
+  ngOnInit(): void {
+  }
 }
